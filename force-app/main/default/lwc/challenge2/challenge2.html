@@ -1,0 +1,7 @@
+<template>
+    <h1>{headerText}</h1>
+    <template lwc:if={showField}>
+        <lightning-input label="header" type="text" class="input" lwc:ref="input" onchange={updateHeader}></lightning-input>
+    </template>
+    <lightning-button label="Toggle" onclick={handleClick}></lightning-button>
+</template>
