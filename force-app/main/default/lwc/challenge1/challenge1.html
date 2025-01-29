@@ -1,0 +1,9 @@
+<template>
+    <lightning-input label="message" type="text" class="input" lwc:ref="input"></lightning-input>
+    <lightning-button label="add" onclick={handleClick}></lightning-button>
+    <template iterator:it={inputs}>
+        <li key={it.value.Id}>
+            <ul>{it.value}</ul>
+        </li>
+    </template>
+</template>
