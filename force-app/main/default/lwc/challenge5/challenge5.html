@@ -1,5 +1,6 @@
 <template>
     <lightning-input label="name" type="text" lwc:ref="parentInput"></lightning-input>
     <lightning-button label="search" onclick={handleClick}></lightning-button>
-    <c-challenge5-child child-input={parentInput}></c-challenge5-child>
+    <c-challenge6-sidebar class="slds-float_right" show={displaySidebar} description={descriptionFromChild}></c-challenge6-sidebar>
+    <c-challenge5-child onsendinfo={onRequest} ontoggle={toggleDesc} child-input={parentInput}></c-challenge5-child>
 </template>

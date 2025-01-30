@@ -1,0 +1,11 @@
+<template>
+    <lightning-input label="name" type="text" lwc:ref="input"></lightning-input>
+    <lightning-button label="Search" onclick={handleClick}></lightning-button>
+    <template lwc:if={contact}>
+        <template for:each={contact} for:item="list">
+            <template for:each={list} for:item="con"> <!--have to iterate through two lists because SOSL returns a list of lists...-->
+                <li key={con.Id}>{con.FirstName} {con.LastName}, {con.Phone}, {con.Email}</li>
+            </template>
+        </template>
+    </template>
+</template>

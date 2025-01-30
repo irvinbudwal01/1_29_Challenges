@@ -43,6 +43,10 @@ export default class Challenge5Child extends LightningElement {
         else {
 
         }
-        
+        this.dispatchEvent(new CustomEvent('sendinfo', {detail: {message: this.bandDisplayed.Description}}));
+    }
+
+    handleClick() {
+        this.dispatchEvent(new Event('toggle'));
     }
 }
